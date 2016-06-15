@@ -7,24 +7,29 @@ if( Mage::getStoreConfig($confPath.'activation') == 1):
     $_items = $this->getItems();
     if(count($_items)):
         // crop/resize - sizes depending on config
-        $ratio_w = Mage::getStoreConfig($confPath.'ratiowidth');
-        $ratio_h = Mage::getStoreConfig($confPath.'ratioheight');
+        $ratio_w = Mage::getStoreConfig($confPath.'ratiowidth') ? Mage::getStoreConfig($confPath.'ratiowidth') : 1900;
+        $ratio_h = Mage::getStoreConfig($confPath.'ratioheight') ? Mage::getStoreConfig($confPath.'ratioheight') : 450;
+        // owl config
+        $nav = Mage::getStoreConfig($confPath.'nav') ? 'true' : 'false';
+        $dots = Mage::getStoreConfig($confPath.'dots') ? 'true' : 'false';
+        $autoplay = Mage::getStoreConfig($confPath.'autoplay') ? 'true' : 'false';
+        $speed = Mage::getStoreConfig($confPath.'speed') ?  Mage::getStoreConfig($confPath.'speed') : '5000';
     ?>
-        <div class="slider-block">
-            <div class="container">
+        <div class="slider_block">
+            <div class="owl-carousel container" id="owl-slider">
                 <?php foreach ($_items as $_item): ?>
                     <?php $slide = Mage::getModel('catalog/product')->load($_item->getEntityId()); ?>
-                    <?php $lienSlider = $slide->getLienSlider(); ?>
+                    <?php $lien_slider = $slide->getLienSlider(); ?>
                     <div class="item slider_image">
-                    <?php if($lienSlider): ?>
-                        <a href="<?php echo Mage::getUrl('') . $lienSlider; ?>">
+                    <?php if($lien_slider): ?>
+                        <a href="<?php echo Mage::getUrl('').$lien_slider; ?>">
                     <?php endif; ?>
 		                    <img src="<?php echo Mage::helper('catalog/image')
                                         ->init($slide, 'image')
                                         ->constrainOnly(false)
                                         ->keepAspectRatio(true)
                                         ->keepFrame(true)
-                                        ->resize($ratio_w, $ratio_h); ?>"
+                                        ->resize($ratio_w,$ratio_h); ?>"
     					 alt="<?php echo $slide->getName(); ?>" />
                     <?php if($lien_slider): ?>
                         </a>
@@ -33,6 +38,22 @@ if( Mage::getStoreConfig($confPath.'activation') == 1):
                 <?php endforeach; ?>
             </div>
         </div>
+
+        <!-- Start slider -->
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+              jQuery("#owl-slider").owlCarousel({
+                  nav: <?= $nav ?>, // Show next and prev buttons
+                  dots: <?= $dots ?>,
+                  loop: <?php echo (count($_items) > 1) ? 'true' : 'false'; ?>,
+                  margin:0,
+                  autoplayTimeout : <?= $speed ?>,
+                  autoplay: <?= $autoplay ?>,
+                  autoplayHoverPause : true,
+                  items:1
+              });
+            });
+        </script>
 
     <?php endif; ?>
 <?php endif; ?>
