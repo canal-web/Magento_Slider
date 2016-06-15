@@ -1,5 +1,5 @@
 src/app/code/community/Canalweb/Slider                      app/code/community/Canalweb/Slider                     
-src/app/design/frontend/base/default/template/slider        app/design/frontend/base/default/template/slider       
+src/app/design/frontend/rwd/default/template/slider         app/design/frontend/rwd/default/template/slider        
 src/app/etc/modules/Canalweb_Slider.xml                     app/etc/modules/Canalweb_Slider.xml                    
 src/skin/frontend/base/default/carousel/AjaxLoader.gif      skin/frontend/base/default/carousel/AjaxLoader.gif     
 src/skin/frontend/base/default/carousel/grabbing.png        skin/frontend/base/default/carousel/grabbing.png       
