@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <slider translate="label" module="slider">
+            <label>Slider</label>
+            <sort_order>140</sort_order>
+        </slider>
+    </tabs>
+    <sections>
+        <slider translate="label" module="slider">
+          <label>Configuration</label>
+          <tab>slider</tab>
+          <frontend_type>text</frontend_type>
+          <sort_order>10</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <groups>
+              <main translate="label" module="slider">
+                  <label>Configuration</label>
+                  <frontend_type>text</frontend_type>
+                  <sort_order>1</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+                  <fields>
+                    <activation translate="label">
+                          <label>Activate</label>
+                          <comment>Display slider block, or not</comment>
+                          <frontend_type>select</frontend_type>
+                          <source_model>adminhtml/system_config_source_yesno</source_model>
+                          <sort_order>5</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>1</show_in_website>
+                          <show_in_store>1</show_in_store>
+                      </activation>
+                      <attribute_set_id translate="label comment">
+                          <label>Attribute set ID</label>
+                          <comment>Attribute set for slider products</comment>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>20</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>1</show_in_website>
+                          <show_in_store>1</show_in_store>
+                          <validate>required_entry</validate>
+                          <depends>
+                              <activation>1</activation>
+                          </depends>
+                      </attribute_set_id>
+                        <ratiowidth translate="label comment">
+                            <label>Ratio (width, in pixels)</label>
+                            <comment>Slider images will all be resized following these proportions (digits only)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <activation>1</activation>
+                            </depends>
+                        </ratiowidth>
+                        <ratioheight translate="label comment">
+                          <label>Ratio (height, in pixels)</label>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>30</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>1</show_in_website>
+                          <show_in_store>1</show_in_store>
+                          <depends>
+                              <activation>1</activation>
+                          </depends>
+                      </ratioheight>
+                  </fields>
+              </main>
+          </groups>
+      </slider>
+    </sections>
+</config>

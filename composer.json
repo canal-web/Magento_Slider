@@ -1,0 +1,13 @@
+{
+    "name": "canal-web/magento-slider",
+    "type": "magento-module",
+    "description": "Create an owl carrousel of products from a specified attribute set.",
+    "require": {
+    },
+    "authors":[
+      {
+            "name":"Deborah Jean",
+            "email":"deborah@canal-web.fr"
+        }
+    ]
+}

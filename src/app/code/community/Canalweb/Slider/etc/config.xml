@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Canalweb_Slider>
+          <version>1.0.0</version>
+      </Canalweb_Slider>
+    </modules>
+    <global>
+        <blocks>
+            <slider>
+                <class>Canalweb_Slider_Block</class>
+            </slider>
+        </blocks>
+        <models>
+            <slider>
+                <class>Canalweb_Slider_Model</class>
+            </slider>
+        </models>
+		<helpers>
+			<slider>
+				<class>Canalweb_Slider_Helper</class>
+			</slider>
+		</helpers>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <slider translate="title">
+                                            <title>Slider</title>
+                                        </slider>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

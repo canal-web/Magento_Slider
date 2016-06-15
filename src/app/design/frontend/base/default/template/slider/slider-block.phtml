@@ -1,0 +1,38 @@
+<?php
+$confPath = 'slider/main/';
+if( Mage::getStoreConfig($confPath.'activation') == 1):
+?>
+    <?php
+    /* Retrieve needed data */
+    $_items = $this->getItems();
+    if(count($_items)):
+        // crop/resize - sizes depending on config
+        $ratio_w = Mage::getStoreConfig($confPath.'ratiowidth');
+        $ratio_h = Mage::getStoreConfig($confPath.'ratioheight');
+    ?>
+        <div class="slider-block">
+            <div class="container">
+                <?php foreach ($_items as $_item): ?>
+                    <?php $slide = Mage::getModel('catalog/product')->load($_item->getEntityId()); ?>
+                    <?php $lienSlider = $slide->getLienSlider(); ?>
+                    <div class="item slider_image">
+                    <?php if($lienSlider): ?>
+                        <a href="<?php echo Mage::getUrl('') . $lienSlider; ?>">
+                    <?php endif; ?>
+		                    <img src="<?php echo Mage::helper('catalog/image')
+                                        ->init($slide, 'image')
+                                        ->constrainOnly(false)
+                                        ->keepAspectRatio(true)
+                                        ->keepFrame(true)
+                                        ->resize($ratio_w, $ratio_h); ?>"
+    					 alt="<?php echo $slide->getName(); ?>" />
+                    <?php if($lien_slider): ?>
+                        </a>
+                    <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+    <?php endif; ?>
+<?php endif; ?>
