@@ -3,6 +3,13 @@ Create an owl carrousel of products from a specified attribute set.
 
 ## Howto
 After installing the module, activate and configure the slider in System > Configuration > Slider.
+You will need at least these attributes:
+* name (required)
+* image (required)
+* link_url (can be empty)
+* link_text (can be empty)
+* description (can be empty)
+
 Next step is to add needed ressources in your local xml:
 ```xml
 <default>
@@ -14,7 +21,7 @@ Next step is to add needed ressources in your local xml:
 </default>
 ```
 
-And the slider block wherever you want. Example:
+Then the slider block, wherever you want. Example:
 ```xml
 <reference name="home">
   <block type="page/template_links" name="product_selector" template="productselector/selector-block.phtml"/>

@@ -19,21 +19,31 @@ if( Mage::getStoreConfig($confPath.'activation') == 1):
             <div class="owl-carousel container" id="owl-slider">
                 <?php foreach ($_items as $_item): ?>
                     <?php $slide = Mage::getModel('catalog/product')->load($_item->getEntityId()); ?>
-                    <?php $lien_slider = $slide->getLienSlider(); ?>
-                    <div class="item slider_image">
-                    <?php if($lien_slider): ?>
-                        <a href="<?php echo Mage::getUrl('').$lien_slider; ?>">
-                    <?php endif; ?>
-		                    <img src="<?php echo Mage::helper('catalog/image')
-                                        ->init($slide, 'image')
-                                        ->constrainOnly(false)
-                                        ->keepAspectRatio(true)
-                                        ->keepFrame(true)
-                                        ->resize($ratio_w,$ratio_h); ?>"
-    					 alt="<?php echo $slide->getName(); ?>" />
-                    <?php if($lien_slider): ?>
-                        </a>
-                    <?php endif; ?>
+                    <?php $linkUrl = $slide->getLinkUrl(); ?>
+                    <?php $description = $slide->getDescription(); ?>
+                    <?php $linkText = $slide->getLinkText() ? $slide->getLinkText() : $this->__('Know more'); ?>
+                    <div class="image_area<?php if($linkUrl) { echo " linked\" onclick=\"window.location.href='".$linkUrl."'";} ?>">
+                        <?php if ($description OR $linkUrl): ?>
+                        <div class="slider_infos">
+                            <?php if ($description) { ?>
+                                <p class="description"><?= $description; ?></p>
+                            <?php } ?>
+                            <?php if ($linkUrl) { ?>
+                                <a class="cta btn" href="<?= $linkUrl; ?>">
+                                    <?= $linkText; ?>
+                                </a>
+                            <?php } ?>
+                        </div>
+                        <?php endif;?>
+                        <div class="slider_image">
+    		                <img src="<?php echo Mage::helper('catalog/image')
+                                            ->init($slide, 'image')
+                                            ->constrainOnly(false)
+                                            ->keepAspectRatio(true)
+                                            ->keepFrame(true)
+                                            ->resize($ratio_w, $ratio_h); ?>"
+        					 alt="<?php echo $slide->getName(); ?>" />
+                        </div>
                     </div>
                 <?php endforeach; ?>
             </div>
