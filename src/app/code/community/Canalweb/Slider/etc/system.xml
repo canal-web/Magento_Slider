@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <tabs>
-        <slider translate="label" module="slider">
-            <label>Slider</label>
-            <sort_order>140</sort_order>
-        </slider>
+        <cwtab translate="label">
+            <label>Canal Web</label>
+            <sort_order>14</sort_order>
+        </cwtab>
     </tabs>
     <sections>
         <slider translate="label" module="slider">
-          <label>Configuration</label>
-          <tab>slider</tab>
+          <label>Slider</label>
+          <tab>cwtab</tab>
           <frontend_type>text</frontend_type>
-          <sort_order>10</sort_order>
+          <sort_order>140</sort_order>
           <show_in_default>1</show_in_default>
           <show_in_website>1</show_in_website>
           <show_in_store>1</show_in_store>
