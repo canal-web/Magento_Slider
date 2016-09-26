@@ -24,6 +24,6 @@ Next step is to add needed ressources in your local xml:
 Then the slider block, wherever you want. Example:
 ```xml
 <reference name="content">
-    <block type="page/html" name="slider" template="slider/slider-block.phtml"></block>
+    <block type="slider/slider" name="slider" template="slider/slider-block.phtml"></block>
 </reference>
 ```
