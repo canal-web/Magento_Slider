@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Canalweb_Slider>
-          <version>1.0.0</version>
+          <version>1.0.1</version>
       </Canalweb_Slider>
     </modules>
     <global>
@@ -22,6 +22,15 @@
 			</slider>
 		</helpers>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <annonce>
+                    <file>slider.xml</file>
+                </annonce>
+            </updates>
+        </layout>
+    </frontend>
     <adminhtml>
         <acl>
             <resources>
