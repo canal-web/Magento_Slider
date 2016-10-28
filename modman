@@ -1,9 +1,12 @@
 src/app/code/community/Canalweb/Slider                            app/code/community/Canalweb/Slider                           
+src/app/design/frontend/rwd/default/layout/slider.xml             app/design/frontend/rwd/default/layout/slider.xml            
 src/app/design/frontend/rwd/default/template/slider               app/design/frontend/rwd/default/template/slider              
 src/app/etc/modules/Canalweb_Slider.xml                           app/etc/modules/Canalweb_Slider.xml                          
 src/skin/frontend/base/default/carousel/ajax-loader.gif           skin/frontend/base/default/carousel/ajax-loader.gif          
 src/skin/frontend/base/default/carousel/owl.carousel.css          skin/frontend/base/default/carousel/owl.carousel.css         
+src/skin/frontend/base/default/carousel/owl.carousel.js           skin/frontend/base/default/carousel/owl.carousel.js          
 src/skin/frontend/base/default/carousel/owl.carousel.min.css      skin/frontend/base/default/carousel/owl.carousel.min.css     
+src/skin/frontend/base/default/carousel/owl.carousel.min.js       skin/frontend/base/default/carousel/owl.carousel.min.js      
 src/skin/frontend/base/default/carousel/owl.theme.default.css     skin/frontend/base/default/carousel/owl.theme.default.css    
 src/skin/frontend/base/default/carousel/owl.theme.default.min.css skin/frontend/base/default/carousel/owl.theme.default.min.css
 src/skin/frontend/base/default/carousel/owl.theme.green.css       skin/frontend/base/default/carousel/owl.theme.green.css      
