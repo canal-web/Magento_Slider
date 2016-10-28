@@ -2,8 +2,8 @@
 <config>
     <modules>
         <Canalweb_Slider>
-          <version>1.0.1</version>
-      </Canalweb_Slider>
+            <version>1.0.1</version>
+        </Canalweb_Slider>
     </modules>
     <global>
         <blocks>
@@ -16,18 +16,18 @@
                 <class>Canalweb_Slider_Model</class>
             </slider>
         </models>
-		<helpers>
-			<slider>
-				<class>Canalweb_Slider_Helper</class>
-			</slider>
-		</helpers>
+        <helpers>
+            <slider>
+                <class>Canalweb_Slider_Helper</class>
+            </slider>
+        </helpers>
     </global>
     <frontend>
         <layout>
             <updates>
-                <annonce>
+                <slider>
                     <file>slider.xml</file>
-                </annonce>
+                </slider>
             </updates>
         </layout>
     </frontend>
