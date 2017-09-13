@@ -1,6 +1,6 @@
 src/app/code/community/Canalweb/Slider                            app/code/community/Canalweb/Slider                           
-src/app/design/frontend/rwd/default/layout/slider.xml             app/design/frontend/rwd/default/layout/slider.xml            
-src/app/design/frontend/rwd/default/template/slider               app/design/frontend/rwd/default/template/slider              
+src/app/design/frontend/base/default/layout/slider.xml            app/design/frontend/base/default/layout/slider.xml           
+src/app/design/frontend/base/default/template/slider              app/design/frontend/base/default/template/slider             
 src/app/etc/modules/Canalweb_Slider.xml                           app/etc/modules/Canalweb_Slider.xml                          
 src/skin/frontend/base/default/carousel/ajax-loader.gif           skin/frontend/base/default/carousel/ajax-loader.gif          
 src/skin/frontend/base/default/carousel/owl.carousel.css          skin/frontend/base/default/carousel/owl.carousel.css         
